@@ -18,6 +18,8 @@ import { staff } from '../data/staff';
 import { useTransactions } from '../context/TransactionContext';
 import { formatCurrency } from '../data/utils';
 
+const LOGO_URL = 'https://i.postimg.cc/fTVfbx1T/Whats-App-Image-2026-01-31-at-16-36-44.jpg';
+
 function generateMpesaCode() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   return Array.from({ length: 10 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
@@ -102,9 +104,7 @@ export default function POS() {
             <Link to="/" className="text-gray-400 hover:text-white transition-colors">
               <ArrowLeft className="w-5 h-5" />
             </Link>
-            <div className="bg-brand-red rounded-lg p-1.5">
-              <Car className="w-4 h-4 text-white" />
-            </div>
+            <img src={LOGO_URL} alt="Executive Car Wash" className="w-8 h-8 rounded-md object-contain" />
             <span className="font-display font-bold text-sm">Executive Car Wash</span>
           </div>
           <div className="flex items-center gap-3">
@@ -328,9 +328,7 @@ export default function POS() {
               {/* Receipt Header */}
               <div className="text-center mb-6">
                 <div className="flex justify-center mb-3">
-                  <div className="bg-brand-red rounded-xl p-2">
-                    <Car className="w-6 h-6 text-white" />
-                  </div>
+                  <img src={LOGO_URL} alt="Executive Car Wash" className="w-16 h-16 rounded-xl object-contain" />
                 </div>
                 <h3 className="font-display font-bold text-lg">EXECUTIVE CAR & CARPET WASH</h3>
                 <p className="text-sm text-gray-500">Kikuyu, Dagoretti Road</p>

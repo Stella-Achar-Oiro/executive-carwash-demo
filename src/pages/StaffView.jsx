@@ -13,6 +13,8 @@ import { useTransactions } from '../context/TransactionContext';
 import { staff } from '../data/staff';
 import { formatCurrency, formatTime, isToday } from '../data/utils';
 
+const LOGO_URL = 'https://i.postimg.cc/fTVfbx1T/Whats-App-Image-2026-01-31-at-16-36-44.jpg';
+
 export default function StaffView() {
   const { id } = useParams();
   const staffId = Number(id);
@@ -69,9 +71,7 @@ export default function StaffView() {
           <Link to="/dashboard" className="text-gray-400 hover:text-white transition-colors">
             <ArrowLeft className="w-5 h-5" />
           </Link>
-          <div className="bg-brand-red rounded-lg p-2">
-            <Car className="w-5 h-5 text-white" />
-          </div>
+          <img src={LOGO_URL} alt="Executive Car Wash" className="w-9 h-9 rounded-lg object-contain" />
           <div>
             <h1 className="font-display font-bold text-lg leading-tight">Staff Performance</h1>
             <p className="text-xs text-gray-400">Executive Car & Carpet Wash</p>

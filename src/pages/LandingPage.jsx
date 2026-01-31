@@ -12,6 +12,8 @@ import {
   ChevronRight,
 } from 'lucide-react';
 
+const LOGO_URL = 'https://i.postimg.cc/fTVfbx1T/Whats-App-Image-2026-01-31-at-16-36-44.jpg';
+
 const features = [
   { icon: Shield, title: 'Theft Prevention', desc: 'Every transaction logged and tracked with digital receipts' },
   { icon: Users, title: 'Staff Commission Tracking', desc: 'Auto-calculated commissions per service and staff member' },
@@ -28,23 +30,13 @@ export default function LandingPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-bg-darker via-bg-dark to-bg-darker" />
         <div className="relative max-w-5xl mx-auto px-6 pt-16 pb-20 text-center">
-          {/* Logo area */}
+          {/* Logo */}
           <div className="mb-8 flex justify-center">
-            <div className="bg-gradient-to-br from-brand-red via-brand-gold to-brand-blue p-1 rounded-2xl">
-              <div className="bg-bg-darker rounded-2xl p-6 flex items-center gap-4">
-                <div className="bg-brand-red rounded-xl p-3">
-                  <Car className="w-10 h-10 text-white" />
-                </div>
-                <div className="text-left">
-                  <h1 className="font-display text-2xl font-extrabold text-brand-gold tracking-wide leading-tight">
-                    EXECUTIVE
-                  </h1>
-                  <p className="font-display text-sm font-bold text-brand-red tracking-widest">
-                    CAR & CARPET WASH
-                  </p>
-                </div>
-              </div>
-            </div>
+            <img
+              src={LOGO_URL}
+              alt="Executive Car & Carpet Wash"
+              className="w-48 h-48 rounded-2xl object-contain shadow-2xl"
+            />
           </div>
 
           <div className="flex items-center justify-center gap-2 text-gray-400 text-sm mb-6">
